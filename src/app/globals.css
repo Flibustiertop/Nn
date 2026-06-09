@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f9f1e3;
+  --foreground: #26130f;
+  --muted: #6f5548;
+  --border: rgba(71, 39, 29, 0.14);
+  --card: rgba(255, 249, 241, 0.76);
+  --card-strong: rgba(255, 252, 247, 0.9);
+  --surface: #fff9f1;
+  --chocolate-900: #26130f;
+  --chocolate-700: #5a2f22;
+  --chocolate-500: #8f5f4c;
+  --caramel-500: #d9965b;
+  --cream-300: #fff0d8;
+  --accent: #ff8c5a;
+  --accent-2: #ffcb57;
+  --success: #7ab879;
+  --shadow-soft: 0 30px 70px rgba(82, 42, 29, 0.12);
+  --shadow-card: 0 18px 45px rgba(63, 31, 18, 0.08);
+  --radius-xl: 2rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(255, 214, 143, 0.6), transparent 30%),
+    radial-gradient(circle at 90% 0%, rgba(255, 141, 90, 0.18), transparent 25%),
+    linear-gradient(180deg, #fff8ee 0%, #f6ecde 36%, #f4e6d7 100%);
+  color: var(--foreground);
+  font-family: var(--font-body), sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(255, 140, 90, 0.24);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+main {
+  isolation: isolate;
+}
+
+.section-shell {
+  position: relative;
+  overflow: clip;
+}
+
+.container-shell {
+  width: min(100% - 1.5rem, 75rem);
+  margin-inline: auto;
+}
+
+.glass-card {
+  background: linear-gradient(180deg, rgba(255, 251, 246, 0.82), rgba(255, 247, 239, 0.72));
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-card);
+  backdrop-filter: blur(18px);
+}
+
+.section-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.noise-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.08;
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.9) 0.7px, transparent 0.8px),
+    radial-gradient(circle at 80% 30%, rgba(82, 42, 29, 0.8) 0.7px, transparent 0.8px);
+  background-size: 22px 22px;
+}
+
+@media (min-width: 768px) {
+  .section-grid {
+    gap: 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
