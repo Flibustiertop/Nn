@@ -3,7 +3,7 @@ import { ShieldCheck, Star, Users } from "lucide-react";
 
 import { Reveal } from "@/components/animation/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { galleryItems, proofPoints } from "@/data/site-content";
+import { proofPoints, socialProofImages } from "@/data/site-content";
 
 const icons = [Users, ShieldCheck, Star];
 
@@ -49,9 +49,18 @@ export function SocialProofSection() {
           </Reveal>
           <Reveal delay={0.08}>
             <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-2">
-              {galleryItems.slice(1, 5).map((item) => (
-                <div key={item.id} className="relative aspect-square overflow-hidden rounded-[1.8rem] border border-white/70 shadow-[var(--shadow-card)]">
-                  <Image src={item.image} alt={item.alt} fill className="object-cover" sizes="(max-width: 1280px) 50vw, 25vw" />
+              {socialProofImages.map((item) => (
+                <div
+                  key={item.id}
+                  className="relative aspect-square overflow-hidden rounded-[1.8rem] border border-white/70 shadow-[var(--shadow-card)]"
+                >
+                  <Image
+                    src={item.image}
+                    alt={item.alt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1280px) 50vw, 25vw"
+                  />
                 </div>
               ))}
             </div>

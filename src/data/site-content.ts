@@ -47,6 +47,13 @@ export type GalleryItem = {
   size: "sm" | "md" | "lg";
 };
 
+export type MediaItem = {
+  id: string;
+  title: string;
+  alt: string;
+  image: string;
+};
+
 export type FaqItem = {
   id: string;
   question: string;
@@ -169,6 +176,36 @@ export const galleryItems: GalleryItem[] = [
     ),
     size: "md",
   },
+  {
+    id: "gallery-6",
+    title: "Play Table",
+    alt: "Детский шоколад Tiggi на игровом столе рядом с книгами и игрушками",
+    image: createT2IUrl(
+      "premium kids chocolate placed on a playful activity table with books and wooden toys, warm daylight, editorial ecommerce photography, soft beige and caramel palette, premium playful luxury brand",
+      "portrait_4_3",
+    ),
+    size: "sm",
+  },
+  {
+    id: "gallery-7",
+    title: "Backpack Ready",
+    alt: "Порционный шоколад Tiggi, подготовленный для школы и прогулки",
+    image: createT2IUrl(
+      "kids chocolate snack portions next to an open backpack, fruit, water bottle and lunch accessories, modern family lifestyle, premium DTC visual, warm neutral styling",
+      "portrait_4_3",
+    ),
+    size: "md",
+  },
+  {
+    id: "gallery-8",
+    title: "Shelf Moment",
+    alt: "Упаковки Tiggi в аккуратной домашней кухонной зоне",
+    image: createT2IUrl(
+      "premium kids chocolate packages styled on a modern kitchen shelf, warm cream walls, subtle sunlight, luxury family product styling, clean ecommerce editorial scene",
+      "portrait_4_3",
+    ),
+    size: "sm",
+  },
 ];
 
 export const flavors: Flavor[] = [
@@ -230,6 +267,75 @@ export const proofPoints = [
   { label: "ключевых proof-сигнала", value: "12+" },
   { label: "главных вкуса", value: "2" },
   { label: "эмоций в первом экране", value: "100%" },
+];
+
+export const storyMoments: MediaItem[] = [
+  {
+    id: "story-1",
+    title: "Breakfast Glow",
+    alt: "Шоколад Tiggi в утреннем семейном завтраке с мягким солнечным светом",
+    image: createT2IUrl(
+      "premium kids chocolate at a warm family breakfast table, creamy tones, natural sunlight, milk and fruit nearby, editorial lifestyle food photography, premium playful luxury",
+      "portrait_4_3",
+    ),
+  },
+  {
+    id: "story-2",
+    title: "After School",
+    alt: "Ребенок после школы с шоколадом Tiggi в светлом современном интерьере",
+    image: createT2IUrl(
+      "school age child enjoying a premium chocolate snack after school in a bright modern apartment, cozy neutral interior, authentic lifestyle photography, high-end DTC brand campaign",
+      "portrait_4_3",
+    ),
+  },
+  {
+    id: "story-3",
+    title: "Packed With Care",
+    alt: "Аккуратно собранный набор перекуса с Tiggi для дороги или прогулки",
+    image: createT2IUrl(
+      "carefully packed family snack set with premium kids chocolate, fruit, milk and beige textile bag, top view product styling, modern ecommerce campaign image",
+      "square_hd",
+    ),
+  },
+];
+
+export const socialProofImages: MediaItem[] = [
+  {
+    id: "proof-1",
+    title: "Parent Trust",
+    alt: "Родитель выбирает Tiggi среди детских перекусов на светлой кухне",
+    image: createT2IUrl(
+      "parent choosing premium kids chocolate snack on a bright kitchen counter, clean packaging visible, trustworthy family brand mood, lifestyle commercial photography",
+      "square_hd",
+    ),
+  },
+  {
+    id: "proof-2",
+    title: "Snack Routine",
+    alt: "Повседневный семейный перекус с Tiggi и фруктами",
+    image: createT2IUrl(
+      "everyday family snack routine with premium kids chocolate and fresh fruit, elegant warm tones, lifestyle ecommerce image, premium but playful composition",
+      "square_hd",
+    ),
+  },
+  {
+    id: "proof-3",
+    title: "Gift Box",
+    alt: "Шоу-бокс Tiggi в премиальной домашней подаче",
+    image: createT2IUrl(
+      "premium kids chocolate show box styled at home like a luxury family treat, soft fabric, creamy highlights, editorial DTC product shot",
+      "square_hd",
+    ),
+  },
+  {
+    id: "proof-4",
+    title: "Happy Bite",
+    alt: "Ребенок с довольной эмоцией во время перекуса Tiggi",
+    image: createT2IUrl(
+      "happy child taking a bite of premium kids chocolate snack, candid lifestyle campaign, bright natural light, safe and joyful family brand aesthetic",
+      "square_hd",
+    ),
+  },
 ];
 
 export const faqItems: FaqItem[] = [
